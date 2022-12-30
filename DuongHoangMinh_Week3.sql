@@ -158,7 +158,7 @@ begin
     if(:new.salary < :old.salary) 
     then raise_application_error('New salary must be more than current salary');
     end if; 
-    if(:new.commission_pct <: old.commission_pct)
+    if(:new.commission_pct < :old.commission_pct)
     then raise_application_error('New commission must be more than the current commission');
     end if;
 end;
